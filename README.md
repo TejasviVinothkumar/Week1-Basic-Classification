@@ -1,112 +1,75 @@
-# Week 1 - Basic Classification Using Tabular Features
+# Week 3 – CNN and Transfer Learning for Facial Emotion Recognition
 
 ## Project Title
-
-Iris Flower Classification using Decision Tree
-
-## Objective
-
-The objective of this project is to perform a basic machine learning classification task using tabular data. The Iris dataset is used to train a Decision Tree Classifier and predict the species of iris flowers.
-
-## Dataset
-
-* Dataset Name: Iris Dataset
-* Source: Scikit-Learn Library
-* Number of Samples: 150
-* Number of Features: 4
-
-### Features
-
-1. Sepal Length
-2. Sepal Width
-3. Petal Length
-4. Petal Width
-
-### Target Classes
-
-* Iris Setosa
-* Iris Versicolor
-* Iris Virginica
-
-## Technologies Used
-
-* Python
-* Scikit-Learn
-* Pandas
-
-## Machine Learning Algorithm
-
-Decision Tree Classifier
-
-## Steps Performed
-
-1. Loaded the Iris dataset.
-2. Split the dataset into training and testing sets.
-3. Trained a Decision Tree Classifier.
-4. Predicted the flower species using the test data.
-5. Evaluated the model using Accuracy Score and Classification Report.
-
-## Results
-
-* Model Accuracy: 100%
-* Successfully classified iris flower species using tabular features.
-
-## Output
-
-The program displays:
-
-* Accuracy Score
-* Precision
-* Recall
-* F1-Score
-* Classification Report
-
-## Author
-
-TEJASVI VINOTHKUMAR
-# Week 2 - Image Dataset Preparation, Feature Extraction and Data Augmentation
-
-## Project Title
-
 Facial Emotion Recognition System
 
 ## Objective
+Implement a Convolutional Neural Network (CNN) and a Transfer Learning model using VGG16 on the FER2013 dataset for facial emotion recognition.
 
-To prepare image datasets, extract useful image features, and perform data augmentation techniques for improving machine learning model performance.
+---
 
-## Tools Used
+## Dataset
 
-* Python
-* OpenCV
-* NumPy
+**Dataset Name:** FER2013
 
-## Tasks Performed
+**Emotion Classes**
+- Angry
+- Disgust
+- Fear
+- Happy
+- Neutral
+- Sad
+- Surprise
 
-### 1. Image Dataset Preparation
+Training Images: 28,709
 
-* Created image dataset
-* Resized images to 224 × 224 pixels
-* Converted images to grayscale
+Testing Images: 7,178
 
-### 2. Feature Extraction
+---
 
-* Applied Canny Edge Detection
-* Extracted image features from processed images
+## Technologies Used
 
-### 3. Data Augmentation
+- Python
+- TensorFlow
+- Keras
+- OpenCV
+- NumPy
 
-* Horizontal Flip
-* 90 Degree Rotation
+---
 
-## Output Files Generated
+## Tasks Completed
 
-* processed_face1.jpg
-* processed_face2.jpg
-* processed_face3.jpg
-* features_face1.jpg
-* flipped_face1.jpg
-* rotated_face1.jpg
+### Dataset Loading
+- Loaded FER2013 dataset
+- Verified all emotion classes
+
+### CNN Model
+- Built a custom CNN architecture
+- Added convolution, pooling and dense layers
+- Compiled the model successfully
+
+### Transfer Learning
+- Implemented VGG16 pretrained model
+- Used ImageNet weights
+- Froze pretrained layers
+- Added custom classification layers
+
+---
+
+## Results
+
+### CNN
+- Model created successfully
+- Total Parameters: 355,847
+
+### Transfer Learning (VGG16)
+- Model created successfully
+- Total Parameters: 21,139,271
+
+---
 
 ## Outcome
 
-Successfully prepared image data, extracted features, and generated augmented images for future Facial Emotion Recognition model training.
+Successfully implemented both a custom CNN model and a VGG16 Transfer Learning model for the FER2013 facial emotion recognition dataset.
+
+The project is now ready for model training and evaluation in the next phase.
