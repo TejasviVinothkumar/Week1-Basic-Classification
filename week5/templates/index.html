@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EmotionSense AI | Multimodal Emotion Recognition</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+
+<h1>🤖 EmotionSense AI</h1>
+
+<p>Multimodal Emotion Recognition System</p>
+
+</div>
+
+<div class="about">
+
+<h2>About</h2>
+
+<p>
+EmotionSense AI combines facial emotion recognition and text sentiment
+analysis to understand a user's emotional state and generate an AI-based
+response.
+</p>
+
+</div>
+
+<form action="/predict"
+method="POST"
+enctype="multipart/form-data">
+
+<label>📷 Upload Face Image</label>
+
+<input
+type="file"
+name="image"
+accept="image/*"
+required>
+
+<label>💬 Tell us how you're feeling</label>
+
+<textarea
+name="text"
+rows="5"
+placeholder="Type your thoughts here..."
+required></textarea>
+
+<button>
+
+🔍 Analyze Emotion
+
+</button>
+
+</form>
+
+{% if face %}
+
+<div class="results">
+
+{% if image %}
+
+<div style="text-align:center;margin-bottom:20px;">
+
+<img
+src="{{ url_for('static', filename='uploads/' + image) }}"
+width="180"
+style="border-radius:15px;">
+
+</div>
+
+{% endif %}
+
+<h2>📊 Analysis Results</h2>
+
+<div class="card">
+
+<h3>😊 Facial Emotion</h3>
+
+<p>{{ face }}</p>
+
+</div>
+
+<div class="card">
+
+<h3>💬 Text Sentiment</h3>
+
+<p>{{ sentiment }}</p>
+
+</div>
+
+<div class="card">
+
+<h3>🧠 Final Emotion</h3>
+
+<p>{{ final }}</p>
+
+</div>
+
+<div class="response">
+
+<h3>🤖 Emotion-Based AI Response</h3>
+
+<p>{{ response }}</p>
+
+</div>
+
+</div>
+
+{% endif %}
+
+<div class="footer">
+
+<hr>
+
+<p>Developed by</p>
+
+<h3>Tejasvi Vinothkumar</h3>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
