@@ -1,2 +1,8 @@
 scikit-learn
 pandas
+tensorflow
+keras
+numpy
+matplotlib
+opencv-python
+
